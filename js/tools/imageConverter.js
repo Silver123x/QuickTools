@@ -19,7 +19,7 @@ export function render(root){
     const q = Number(quality.value);
     const url = toData(img,type,q);
     prev.innerHTML = '';
-    const outImg = el('<img style="max-width:100%;border-radius:12px">'); outImg.src=url; prev.appendChild(outImg);
+    const outImg = el('<img style="max-width:100%;border-radius:12px" loading="lazy">'); outImg.src=url; prev.appendChild(outImg);
     const a = el('<a class="btn btn-primary">Download</a>');
     a.href = url;
     const ext = type.split('/')[1];

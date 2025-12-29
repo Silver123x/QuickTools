@@ -57,9 +57,44 @@ function initHeader() {
   setHeaderShadow();
   on(window,'scroll',setHeaderShadow);
 }
+function initTheme() {
+  const btn=qs('#themeToggle');
+  const key='tw-theme';
+  const saved=localStorage.getItem(key);
+  if(saved==='dark') document.documentElement.classList.add('dark');
+  if(btn){
+    btn.textContent = document.documentElement.classList.contains('dark') ? 'Light' : 'Dark';
+    on(btn,'click',()=>{
+      const dark=document.documentElement.classList.toggle('dark');
+      localStorage.setItem(key, dark?'dark':'light');
+      btn.textContent = dark ? 'Light' : 'Dark';
+    });
+  }
+}
+function registerSW() {
+  if('serviceWorker' in navigator){
+    navigator.serviceWorker.register('/js/sw.js').catch(()=>{});
+  }
+}
+function initVitals(){
+  try{
+    const po = new PerformanceObserver((list)=>{
+      list.getEntries().forEach((e)=>{
+        // placeholder: send to analytics if available
+        if(window.TW_ANALYTICS){ try{ window.TW_ANALYTICS('web-vitals', e.name, e.value); }catch(_e){} }
+      });
+    });
+    po.observe({ type: 'largest-contentful-paint', buffered: true });
+    po.observe({ type: 'layout-shift', buffered: true });
+    po.observe({ type: 'first-input', buffered: true });
+  }catch(e){}
+}
 document.addEventListener('DOMContentLoaded', ()=>{
   initHamburger();
   initHeader();
   initSearch();
   initContactForm();
+  initTheme();
+  registerSW();
+  initVitals();
 });

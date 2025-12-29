@@ -22,7 +22,7 @@ export function render(root){
     const url = toData(img,type,Number(quality.value));
     const outputBytes = atob(url.split(',')[1]).length;
     stats.textContent = 'Input '+fmtBytes(inputBytes)+' • Output '+fmtBytes(outputBytes)+' • '+Math.round((1-outputBytes/inputBytes)*100)+'%';
-    prev.innerHTML=''; const outImg=el('<img style="max-width:100%;border-radius:12px">'); outImg.src=url; prev.appendChild(outImg);
+    prev.innerHTML=''; const outImg=el('<img style="max-width:100%;border-radius:12px" loading="lazy">'); outImg.src=url; prev.appendChild(outImg);
     const a=el('<a class="btn btn-primary">Download</a>'); a.href=url; const ext=(type.split('/')[1]); a.download='compressed.'+ext; act.innerHTML=''; act.appendChild(a);
   }
   file.addEventListener('change', compress);

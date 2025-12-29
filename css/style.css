@@ -16,6 +16,17 @@
   --space-5: 28px;
   --space-6: 40px;
 }
+.dark {
+  --bg: #0b1020;
+  --text: #e7eef7;
+  --muted: #a9b4c1;
+  --brand: #60a5fa;
+  --brand-600: #3b82f6;
+  --brand-50: #0f172a;
+  --card: #111833;
+  --border: #1f2b46;
+  --shadow: 0 10px 30px rgba(0,0,0,0.45);
+}
 * { box-sizing: border-box; }
 html, body { height: 100%; }
 body {
@@ -132,6 +143,7 @@ body {
   border-top: 1px solid var(--border);
   background: #f9fafb;
 }
+.dark .footer { background: #0f172a; }
 .footer-inner {
   display: flex;
   align-items: center;
@@ -149,6 +161,7 @@ body {
   box-shadow: var(--shadow);
   max-width: 680px;
 }
+.skip-link:focus { left: 12px; top: 12px; z-index: 1000; }
 .pill {
   display: inline-block;
   padding: 6px 10px;

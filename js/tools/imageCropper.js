@@ -16,7 +16,7 @@ export function render(root){
     X=Math.max(0,Math.min(base.width-1,X)); Y=Math.max(0,Math.min(base.height-1,Y));
     W=Math.max(1,Math.min(base.width-X,W)); H=Math.max(1,Math.min(base.height-Y,H));
     const url=crop(base,X,Y,W,H);
-    prev.innerHTML=''; const out=el('<img style="max-width:100%;border-radius:12px">'); out.src=url; prev.appendChild(out);
+    prev.innerHTML=''; const out=el('<img style="max-width:100%;border-radius:12px" loading="lazy">'); out.src=url; prev.appendChild(out);
     info.textContent='Crop '+W+'×'+H+' at '+X+','+Y;
     act.innerHTML=''; const a=el('<a class="btn btn-primary">Download</a>'); a.href=url; a.download='cropped.png'; act.appendChild(a);
   }

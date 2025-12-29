@@ -26,7 +26,7 @@ export function render(root){
   function draw(){
     if(!base) return;
     const url = transform(base, Number(deg.value), fh.checked, fv.checked);
-    prev.innerHTML=''; const out=el('<img style="max-width:100%;border-radius:12px">'); out.src=url; prev.appendChild(out);
+    prev.innerHTML=''; const out=el('<img style="max-width:100%;border-radius:12px" loading="lazy">'); out.src=url; prev.appendChild(out);
     act.innerHTML=''; const a=el('<a class="btn btn-primary">Download</a>'); a.href=url; a.download='transformed.png'; act.appendChild(a);
   }
   file.addEventListener('change', onFile);

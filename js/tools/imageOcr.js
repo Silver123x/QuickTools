@@ -8,7 +8,7 @@ export function render(root){
   async function run(){
     const f=file.files?.[0]; if(!f) return;
     const {img,src} = await loadImage(f);
-    prev.innerHTML=''; const i=el('<img style="max-width:100%;border-radius:12px">'); i.src=src; prev.appendChild(i);
+    prev.innerHTML=''; const i=el('<img style="max-width:100%;border-radius:12px" loading="lazy">'); i.src=src; prev.appendChild(i);
     const ok = 'TextDetector' in window;
     if(!ok){ status.textContent='Unavailable: requires experimental TextDetector API.'; out.value=''; return; }
     try {

@@ -22,7 +22,7 @@ export function render(root){
     if(sc!==100){ W = Math.round(base.width*sc/100); H = Math.round(base.height*sc/100); w.value=W; h.value=H; }
     if(lock.checked){ const ratio = base.width/base.height; if(document.activeElement===w){ H = Math.round(W/ratio); h.value=H; } else if(document.activeElement===h){ W = Math.round(H*ratio); w.value=W; } }
     const url = resize(base,W,H);
-    prev.innerHTML=''; const out=el('<img style="max-width:100%;border-radius:12px">'); out.src=url; prev.appendChild(out);
+    prev.innerHTML=''; const out=el('<img style="max-width:100%;border-radius:12px" loading="lazy">'); out.src=url; prev.appendChild(out);
     info.textContent = 'Output '+W+'×'+H;
     act.innerHTML=''; const a=el('<a class="btn btn-primary">Download</a>'); a.href=url; a.download='resized.png'; act.appendChild(a);
   }

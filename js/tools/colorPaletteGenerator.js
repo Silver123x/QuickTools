@@ -9,7 +9,7 @@ export function render(root){
   async function run(){
     const f=file.files?.[0]; if(!f) return; const img=await loadImage(f);
     const c=document.createElement('canvas'); c.width=img.width; c.height=img.height; const ctx=c.getContext('2d'); ctx.drawImage(img,0,0);
-    prev.innerHTML=''; const im=el('<img style="max-width:100%;border-radius:12px">'); im.src=c.toDataURL(); prev.appendChild(im);
+    prev.innerHTML=''; const im=el('<img style="max-width:100%;border-radius:12px" loading="lazy">'); im.src=c.toDataURL(); prev.appendChild(im);
     const map=new Map(); const data=ctx.getImageData(0,0,c.width,c.height).data;
     for(let i=0;i<data.length;i+=4*200){ const r=data[i],g=data[i+1],b=data[i+2]; const kr=(r>>5)<<5,kg=(g>>5)<<5,kb=(b>>5)<<5; const key=kr+','+kg+','+kb; map.set(key,(map.get(key)||0)+1); }
     const top=[...map.entries()].sort((a,b)=>b[1]-a[1]).slice(0,5).map(([k])=>k.split(',').map(Number));
