@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tools Wonder — Your daily tools, all in one place. Fast, free, and browser-based utilities for images, text, web, color, calculators, SEO, and more.">
+  <title>Tools Wonder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <div class="logo">Tools Wonder</div>
+      <nav class="nav" id="nav">
+        <a href="#home">Home</a>
+        <a href="#tools">Tools</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Your Daily Tools, All in One Place</h1>
+          <p>Convert, calculate, compress, and simplify your everyday tasks — fast and free.</p>
+          <a class="btn btn-primary" href="#tools">Explore Tools</a>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <svg width="220" height="160" viewBox="0 0 220 160">
+            <rect x="10" y="20" width="70" height="50" rx="10" fill="#e9f2ff"></rect>
+            <rect x="90" y="20" width="70" height="50" rx="10" fill="#d9eaff"></rect>
+            <rect x="170" y="20" width="40" height="50" rx="10" fill="#cfe2ff"></rect>
+            <rect x="10" y="80" width="100" height="60" rx="12" fill="#e9f2ff"></rect>
+            <rect x="120" y="80" width="90" height="60" rx="12" fill="#d9eaff"></rect>
+          </svg>
+        </div>
+      </div>
+      <div class="container search-wrap">
+        <input id="toolSearch" class="search-input" type="search" placeholder="Search a tool…">
+      </div>
+    </section>
+
+    <section id="tools" class="tools-section container">
+      <h2>Image Tools</h2>
+      <p class="section-desc">Convert, compress, resize, crop, and transform images quickly.</p>
+      <div class="grid">
+        <div class="card" data-tool-id="image-converter" data-keywords="image convert png jpg webp">
+          <div class="card-icon">🖼️</div>
+          <div class="card-title">Image Converter</div>
+          <div class="card-desc">Convert images between PNG, JPEG, and WebP.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=image-converter">Use Tool</a>
+        </div>
+        <div class="card" data-tool-id="image-compressor" data-keywords="image compress optimize size">
+          <div class="card-icon">🗜️</div>
+          <div class="card-title">Image Compressor</div>
+          <div class="card-desc">Reduce image file size with quality control.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=image-compressor">Use Tool</a>
+        </div>
+        <div class="card" data-tool-id="image-resizer" data-keywords="image resize scale width height">
+          <div class="card-icon">📐</div>
+          <div class="card-title">Image Resizer</div>
+          <div class="card-desc">Resize to exact dimensions or by percentage.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=image-resizer">Use Tool</a>
+        </div>
+        <div class="card" data-tool-id="image-cropper" data-keywords="image crop trim">
+          <div class="card-icon">✂️</div>
+          <div class="card-title">Image Cropper</div>
+          <div class="card-desc">Crop to focus on what matters.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=image-cropper">Use Tool</a>
+        </div>
+        <div class="card" data-tool-id="image-rotate-flip" data-keywords="image rotate flip mirror">
+          <div class="card-icon">🔁</div>
+          <div class="card-title">Image Rotator & Flipper</div>
+          <div class="card-desc">Rotate and flip with precision.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=image-rotate-flip">Use Tool</a>
+        </div>
+        <div class="card" data-tool-id="image-ocr" data-keywords="image text ocr">
+          <div class="card-icon">🔤</div>
+          <div class="card-title">Image to Text (OCR)</div>
+          <div class="card-desc">Experimental in-browser text extraction.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=image-ocr">Use Tool</a>
+        </div>
+      </div>
+
+      <h2>Document Tools</h2>
+      <p class="section-desc">Perform essential PDF and document operations client-side.</p>
+      <div class="grid">
+        <div class="card" data-tool-id="pdf-to-word" data-keywords="pdf word docx convert">
+          <div class="card-icon">📄</div>
+          <div class="card-title">PDF to Word</div>
+          <div class="card-desc">Convert PDF content to editable text.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=pdf-to-word">Use Tool</a>
+        </div>
+        <div class="card" data-tool-id="word-to-pdf" data-keywords="word pdf convert">
+          <div class="card-icon">📄</div>
+          <div class="card-title">Word to PDF</div>
+          <div class="card-desc">Generate PDF from text content.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=word-to-pdf">Use Tool</a>
+        </div>
+        <div class="card" data-tool-id="pdf-compressor" data-keywords="pdf compress size">
+          <div class="card-icon">🗜️</div>
+          <div class="card-title">PDF Compressor</div>
+          <div class="card-desc">Reduce PDF size client-side.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=pdf-compressor">Use Tool</a>
+        </div>
+        <div class="card" data-tool-id="pdf-merge-split" data-keywords="pdf merge split pages">
+          <div class="card-icon">🔗</div>
+          <div class="card-title">PDF Merger & Splitter</div>
+          <div class="card-desc">Combine or split PDFs.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=pdf-merge-split">Use Tool</a>
+        </div>
+        <div class="card" data-tool-id="pdf-lock-unlock" data-keywords="pdf password protect unlock">
+          <div class="card-icon">🔒</div>
+          <div class="card-title">PDF Lock & Unlock</div>
+          <div class="card-desc">Encrypt or remove passwords.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=pdf-lock-unlock">Use Tool</a>
+        </div>
+        <div class="card" data-tool-id="pdf-esign" data-keywords="pdf esign signature sign">
+          <div class="card-icon">✍️</div>
+          <div class="card-title">eSign PDF</div>
+          <div class="card-desc">Add signatures on PDF pages.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=pdf-esign">Use Tool</a>
+        </div>
+      </div>
+
+      <h2>Calculator Tools</h2>
+      <p class="section-desc">Accurate calculators designed for daily and professional use.</p>
+      <div class="grid">
+        <div class="card" data-tool-id="scientific-calculator" data-keywords="calculator scientific math sin cos tan">
+          <div class="card-icon">🧮</div>
+          <div class="card-title">Scientific Calculator</div>
+          <div class="card-desc">Functions and precision for quick math.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=scientific-calculator">Use Tool</a>
+        </div>
+        <div class="card" data-tool-id="age-calculator" data-keywords="age birthday years months days">
+          <div class="card-icon">🎂</div>
+          <div class="card-title">Age Calculator</div>
+          <div class="card-desc">Calculate age accurately to the day.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=age-calculator">Use Tool</a>
+        </div>
+        <div class="card" data-tool-id="bmi-calculator" data-keywords="bmi body mass index health">
+          <div class="card-icon">⚕️</div>
+          <div class="card-title">BMI Calculator</div>
+          <div class="card-desc">Know your BMI with category hints.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=bmi-calculator">Use Tool</a>
+        </div>
+        <div class="card" data-tool-id="loan-emi-calculator" data-keywords="loan emi interest finance">
+          <div class="card-icon">🏦</div>
+          <div class="card-title">Loan EMI Calculator</div>
+          <div class="card-desc">Plan repayments with clarity.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=loan-emi-calculator">Use Tool</a>
+        </div>
+        <div class="card" data-tool-id="gst-calculator" data-keywords="gst tax inclusive exclusive">
+          <div class="card-icon">💼</div>
+          <div class="card-title">GST Calculator</div>
+          <div class="card-desc">Compute GST inclusive and exclusive.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=gst-calculator">Use Tool</a>
+        </div>
+        <div class="card" data-tool-id="currency-converter" data-keywords="currency exchange converter rates">
+          <div class="card-icon">💱</div>
+          <div class="card-title">Currency Converter</div>
+          <div class="card-desc">Convert currencies with optional live rates.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=currency-converter">Use Tool</a>
+        </div>
+      </div>
+
+      <h2>Text Tools</h2>
+      <p class="section-desc">Fast text transformations, counting, sorting, and security.</p>
+      <div class="grid">
+        <div class="card" data-tool-id="text-case-converter" data-keywords="text case upper lower title">
+          <div class="card-icon">🔤</div>
+          <div class="card-title">Text Case Converter</div>
+          <div class="card-desc">Switch between upper, lower, and title case.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=text-case-converter">Use Tool</a>
+        </div>
+        <div class="card" data-tool-id="word-char-counter" data-keywords="count words characters lines">
+          <div class="card-icon">🔢</div>
+          <div class="card-title">Word & Character Counter</div>
+          <div class="card-desc">Instant counts for words, chars, and lines.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=word-char-counter">Use Tool</a>
+        </div>
+        <div class="card" data-tool-id="remove-duplicate-lines" data-keywords="text lines unique remove duplicates">
+          <div class="card-icon">🧹</div>
+          <div class="card-title">Remove Duplicate Lines</div>
+          <div class="card-desc">Keep unique lines only.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=remove-duplicate-lines">Use Tool</a>
+        </div>
+        <div class="card" data-tool-id="text-sorter" data-keywords="text sort alphabetical numeric">
+          <div class="card-icon">↕️</div>
+          <div class="card-title">Text Sorter</div>
+          <div class="card-desc">Sort lines ascending or descending.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=text-sorter">Use Tool</a>
+        </div>
+        <div class="card" data-tool-id="text-reverser" data-keywords="text reverse flip">
+          <div class="card-icon">🔁</div>
+          <div class="card-title">Text Reverser</div>
+          <div class="card-desc">Reverse text by characters or words.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=text-reverser">Use Tool</a>
+        </div>
+        <div class="card" data-tool-id="text-encrypt-decrypt" data-keywords="text encrypt decrypt aes password">
+          <div class="card-icon">🔐</div>
+          <div class="card-title">Text Encryptor & Decryptor</div>
+          <div class="card-desc">Protect text with AES-GCM in browser.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=text-encrypt-decrypt">Use Tool</a>
+        </div>
+      </div>
+
+      <h2>Web / Developer Tools</h2>
+      <p class="section-desc">Utilities for developers and web workflows.</p>
+      <div class="grid">
+        <div class="card" data-tool-id="minifier" data-keywords="minify html css js">
+          <div class="card-icon">🧩</div>
+          <div class="card-title">HTML / CSS / JS Minifier</div>
+          <div class="card-desc">Simple client-side minification.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=minifier">Use Tool</a>
+        </div>
+        <div class="card" data-tool-id="json-formatter-validator" data-keywords="json format validate">
+          <div class="card-icon">{} </div>
+          <div class="card-title">JSON Formatter & Validator</div>
+          <div class="card-desc">Pretty-print and validate JSON.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=json-formatter-validator">Use Tool</a>
+        </div>
+        <div class="card" data-tool-id="base64-encoder-decoder" data-keywords="base64 encode decode">
+          <div class="card-icon">🧪</div>
+          <div class="card-title">Base64 Encoder & Decoder</div>
+          <div class="card-desc">Convert data to and from Base64.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=base64-encoder-decoder">Use Tool</a>
+        </div>
+        <div class="card" data-tool-id="url-encoder-decoder" data-keywords="url encode decode">
+          <div class="card-icon">🔗</div>
+          <div class="card-title">URL Encoder & Decoder</div>
+          <div class="card-desc">Encode or decode URLs safely.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=url-encoder-decoder">Use Tool</a>
+        </div>
+        <div class="card" data-tool-id="color-picker-converter" data-keywords="color picker converter hex rgb hsl">
+          <div class="card-icon">🎨</div>
+          <div class="card-title">Color Picker & Converter</div>
+          <div class="card-desc">Pick colors and convert formats.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=color-picker-converter">Use Tool</a>
+        </div>
+        <div class="card" data-tool-id="regex-tester" data-keywords="regex test pattern">
+          <div class="card-icon">🧵</div>
+          <div class="card-title">Regex Tester</div>
+          <div class="card-desc">Test patterns against text.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=regex-tester">Use Tool</a>
+        </div>
+      </div>
+
+      <h2>Color Tools</h2>
+      <p class="section-desc">Create, check, and convert colors for accessible design.</p>
+      <div class="grid">
+        <div class="card" data-tool-id="color-picker-from-image" data-keywords="color pick from image">
+          <div class="card-icon">🖌️</div>
+          <div class="card-title">Color Picker from Image</div>
+          <div class="card-desc">Pick any color from an image.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=color-picker-from-image">Use Tool</a>
+        </div>
+        <div class="card" data-tool-id="hex-to-rgb" data-keywords="color hex rgb convert">
+          <div class="card-icon">#️⃣</div>
+          <div class="card-title">HEX to RGB Converter</div>
+          <div class="card-desc">Convert hex to RGB and HSL.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=hex-to-rgb">Use Tool</a>
+        </div>
+        <div class="card" data-tool-id="gradient-generator" data-keywords="gradient generator css">
+          <div class="card-icon">🌈</div>
+          <div class="card-title">Gradient Generator</div>
+          <div class="card-desc">Design smooth linear gradients.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=gradient-generator">Use Tool</a>
+        </div>
+        <div class="card" data-tool-id="contrast-checker" data-keywords="contrast checker wcag">
+          <div class="card-icon">⚖️</div>
+          <div class="card-title">Contrast Checker</div>
+          <div class="card-desc">Check WCAG contrast ratios.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=contrast-checker">Use Tool</a>
+        </div>
+        <div class="card" data-tool-id="color-palette-generator" data-keywords="color palette generator">
+          <div class="card-icon">🟦</div>
+          <div class="card-title">Color Palette Generator</div>
+          <div class="card-desc">Generate palettes from images.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=color-palette-generator">Use Tool</a>
+        </div>
+        <div class="card" data-tool-id="color-blindness-simulator" data-keywords="color blindness simulator">
+          <div class="card-icon">👁️</div>
+          <div class="card-title">Color Blindness Simulator</div>
+          <div class="card-desc">Simulate common color vision types.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=color-blindness-simulator">Use Tool</a>
+        </div>
+      </div>
+
+      <h2>SEO & Marketing Tools</h2>
+      <p class="section-desc">Improve content quality and on-page SEO.</p>
+      <div class="grid">
+        <div class="card" data-tool-id="keyword-density-checker" data-keywords="keyword density seo">
+          <div class="card-icon">🔎</div>
+          <div class="card-title">Keyword Density Checker</div>
+          <div class="card-desc">Analyze keyword usage in text.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=keyword-density-checker">Use Tool</a>
+        </div>
+        <div class="card" data-tool-id="meta-tag-analyzer" data-keywords="meta tag analyzer seo">
+          <div class="card-icon">🏷️</div>
+          <div class="card-title">Meta Tag Analyzer</div>
+          <div class="card-desc">Review meta tags from HTML.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=meta-tag-analyzer">Use Tool</a>
+        </div>
+        <div class="card" data-tool-id="seo-word-counter" data-keywords="seo word counter readability">
+          <div class="card-icon">📝</div>
+          <div class="card-title">SEO Word Counter</div>
+          <div class="card-desc">Counts and readability hints.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=seo-word-counter">Use Tool</a>
+        </div>
+      </div>
+
+      <h2>Utility Tools</h2>
+      <p class="section-desc">Helpful everyday utilities, fully client-side.</p>
+      <div class="grid">
+        <div class="card" data-tool-id="qr-code-generator-scanner" data-keywords="qr code generator scanner">
+          <div class="card-icon">🔳</div>
+          <div class="card-title">QR Code Generator & Scanner</div>
+          <div class="card-desc">Experimental scanner with compatible browsers.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=qr-code-generator-scanner">Use Tool</a>
+        </div>
+        <div class="card" data-tool-id="uuid-generator" data-keywords="uuid unique id generator">
+          <div class="card-icon">🆔</div>
+          <div class="card-title">UUID Generator</div>
+          <div class="card-desc">Generate v4 UUIDs locally.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=uuid-generator">Use Tool</a>
+        </div>
+        <div class="card" data-tool-id="unit-converter" data-keywords="unit converter length weight temperature">
+          <div class="card-icon">📏</div>
+          <div class="card-title">Unit Converter</div>
+          <div class="card-desc">Convert between common units.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=unit-converter">Use Tool</a>
+        </div>
+        <div class="card" data-tool-id="time-zone-converter" data-keywords="time zone converter world clock">
+          <div class="card-icon">⏰</div>
+          <div class="card-title">Time Zone Converter</div>
+          <div class="card-desc">Convert times across zones.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=time-zone-converter">Use Tool</a>
+        </div>
+        <div class="card" data-tool-id="random-password-generator" data-keywords="random number password generator">
+          <div class="card-icon">🎲</div>
+          <div class="card-title">Random Number & Password Generator</div>
+          <div class="card-desc">Generate secure randoms and passwords.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=random-password-generator">Use Tool</a>
+        </div>
+        <div class="card" data-tool-id="barcode-generator" data-keywords="barcode code39 generator">
+          <div class="card-icon">🏷️</div>
+          <div class="card-title">Barcode Generator</div>
+          <div class="card-desc">Generate Code39 barcodes instantly.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=barcode-generator">Use Tool</a>
+        </div>
+        <div class="card" data-tool-id="lighting-height" data-keywords="lighting height control slider">
+          <div class="card-icon">💡</div>
+          <div class="card-title">Lighting Height</div>
+          <div class="card-desc">Adjust height with smooth preview.</div>
+          <a class="btn btn-secondary" href="tools/tool.html?id=lighting-height">Use Tool</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <h2>Contact</h2>
+        <p class="section-desc">Send a message. It is validated client-side and stored locally.</p>
+        <form id="contactForm" class="contact-card" novalidate>
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required>
+            <div class="error" data-for="name"></div>
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required>
+            <div class="error" data-for="email"></div>
+          </div>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <div class="error" data-for="message"></div>
+          </div>
+          <button class="btn btn-primary" type="submit">Send Message</button>
+          <div id="contactStatus" class="status"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="logo">Tools Wonder</div>
+        <div class="tagline">Simplifying your digital life.</div>
+      </div>
+      <div class="footer-links">
+        <a href="#" aria-label="Privacy Policy">Privacy Policy</a>
+        <a href="#" aria-label="Terms of Use">Terms of Use</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
